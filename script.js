@@ -25,13 +25,7 @@ function initHeroVideo() {
     const videoElement = document.getElementById('heroVideo');
     if (!videoElement) return;
 
-    const videos = [
-        'data/main (1).mp4',
-        'data/main (2).mp4',
-        'data/main (3).mp4'
-    ];
-
-    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+    const fixedVideo = 'data/main (1).mp4';
 
     // Find source element or create if not exists (though HTML has one)
     let sourceElement = videoElement.querySelector('source');
@@ -41,7 +35,7 @@ function initHeroVideo() {
         videoElement.appendChild(sourceElement);
     }
 
-    sourceElement.src = randomVideo;
+    sourceElement.src = fixedVideo;
     videoElement.load();
     // Verify play promise to handle potential autoplay policies
     const playPromise = videoElement.play();
