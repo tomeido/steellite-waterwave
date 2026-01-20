@@ -472,14 +472,21 @@ body {
     position: absolute;
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 30px);
     z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     opacity: 0;
-    animation: fadeInUp 1s ease forwards 1.5s;
+    animation: fadeInUpCentered 1s ease forwards 1.5s;
+}
+
+@keyframes fadeInUpCentered {
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .scroll-mouse {
