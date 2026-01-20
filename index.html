@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steellite Water Wave Panel - 조명에 따라 물결치듯 일렁이는 프리미엄 스테인리스 스틸 천장 패널">
+    <meta name="keywords" content="Water Wave Panel, 스테인리스 스틸, 천장 패널, 인테리어, Steellite">
+    <title>Steellite | Water Wave Panel - 물결치는 빛의 예술</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-wave"></div>
+            <span>STEELLITE</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">STEELLITE</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#demo" class="nav-link">Experience</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Background Video -->
+        <div class="hero-video-container">
+            <video id="heroVideo" class="hero-video" autoplay muted loop playsinline>
+                <source src="images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <!-- Interactive Canvas (overlay) -->
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">STEELLITE presents</p>
+            <h1 class="hero-title">
+                <span class="title-line">Water Wave</span>
+                <span class="title-line accent">Panel</span>
+            </h1>
+            <p class="hero-description">
+                조명과 함께 살아 숨쉬는 공간.<br>
+                물결치듯 일렁이는 빛의 예술을 경험하세요.
+            </p>
+            <a href="#demo" class="hero-cta">
+                <span>Experience the Light</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">빛과 공간의 새로운 정의</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">
+                        Water Wave Panel은 단순한 천장재가 아닙니다.
+                        조명이 지나갈 때마다 수면 위 물결처럼 일렁이며,
+                        공간에 생동감과 깊이를 더합니다.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="16" cy="16" r="12" />
+                                    <path d="M16 8v8l4 4" />
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>영구적인 아름다움</h3>
+                                <p>스테인리스 스틸 소재로 반영구적 사용 가능</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M4 16h24M16 4v24" />
+                                    <circle cx="16" cy="16" r="6" />
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>맞춤형 디자인</h3>
+                                <p>다양한 크기와 패턴으로 공간에 최적화</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <path d="M16 4L4 10v12l12 6 12-6V10L16 4z" />
+                                    <path d="M4 10l12 6 12-6M16 16v12" />
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>공간 확장 효과</h3>
+                                <p>반사면이 공간을 넓고 깊어 보이게 연출</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-downloads">
+                        <a href="data/워터웨이브 카다로그.pdf" target="_blank" class="resource-btn">
+                            <span>워터웨이브 카탈로그 자세히 보기</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <a href="data/워터웨이브 600Φ 샘플사진-200916.pdf" target="_blank" class="resource-btn">
+                            <span>샘플 사진 자세히 보기</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <img src="images/about-visual-new.jpg" alt="광화문 미래에셋 Water Wave Panel 시공" loading="lazy">
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="demo">
+        <div class="demo-header">
+            <span class="section-tag">Interactive</span>
+            <h2 class="section-title">조명 시뮬레이션</h2>
+            <p class="section-subtitle">마우스를 움직여 가상의 조명으로 패널의 반사각 변화를 경험하세요</p>
+        </div>
+        <div class="demo-container">
+            <canvas id="demoCanvas" class="demo-canvas"></canvas>
+            <div class="demo-instructions">
+                <div class="instruction-item">
+                    <div class="pulse-dot"></div>
+                    <span>마우스를 움직여 조명 이동</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">시공 사례</h2>
+                <p class="section-subtitle">Water Wave Panel이 만들어낸 특별한 공간들</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">문의하기</h2>
+                    <p class="contact-lead">
+                        Water Wave Panel로 당신의 공간을 특별하게 만들어 보세요.
+                        전문 상담원이 맞춤형 솔루션을 제안해 드립니다.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>
+                            <span>02-2138-3880</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>roof71@steellife.net</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>경기도 김포시</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">이름</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">이메일</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">연락처</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">문의 내용</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>문의하기</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">STEELLITE</span>
+                    <p>물결치는 빛의 예술, Water Wave Panel</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#demo">Experience</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Steellite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+        <button class="lightbox-prev" aria-label="Previous image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <button class="lightbox-next" aria-label="Next image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Cursor Light Effect -->
+    <div id="cursorLight" class="cursor-light"></div>
+
+    <!-- Gallery Data -->
+    <script src="location_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
