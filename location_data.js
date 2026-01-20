@@ -336,5 +336,7 @@ const imageLocations = {
   "project-335.jpg": "multi point forming",
   "project-336.jpg": "multi point forming",
   "project-337.jpg": "multi point forming",
-  "project-338.jpg": "multi point forming"
+  "project-338.jpg": "multi point forming",
+  "project-339.jpg": "티오더(t'order) 본사",
+  "project-340.jpg": "프리미엄 오피스 미팅룸"
 };
