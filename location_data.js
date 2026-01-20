@@ -338,5 +338,9 @@ const imageLocations = {
   "project-337.jpg": "multi point forming",
   "project-338.jpg": "multi point forming",
   "project-339.jpg": "티오더(t'order) 본사",
-  "project-340.jpg": "프리미엄 오피스 미팅룸"
+  "project-340.jpg": "프리미엄 오피스 미팅룸",
+  "project-341.jpg": "천창(Skylight) 워터웨이브 연출",
+  "project-342.jpg": "천창(Skylight) 워터웨이브 연출",
+  "project-343.jpg": "한옥 호텔 수공간(Water Feature)",
+  "project-344.jpg": "한옥 호텔 수공간(Water Feature)"
 };
