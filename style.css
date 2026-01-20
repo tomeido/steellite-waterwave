@@ -681,11 +681,11 @@ body {
     border: 1px solid var(--color-border);
 }
 
-.demo-canvas {
+.demo-video {
     width: 100%;
-    height: 600px;
+    height: auto;
     display: block;
-    cursor: none;
+    aspect-ratio: 16/9;
 }
 
 .demo-instructions {
