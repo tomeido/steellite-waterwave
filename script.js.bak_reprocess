@@ -388,7 +388,7 @@ function initGallery() {
     if (!galleryGrid) return;
 
     // Total number of project images available (project-1.jpg to project-318.jpg)
-    const TOTAL_IMAGES = 362;
+    const TOTAL_IMAGES = 344;
     const DISPLAY_COUNT = 21;
 
     // Layout patterns for visual variety - repeats a 7-item block that fits the 3-column grid perfectly without holes
