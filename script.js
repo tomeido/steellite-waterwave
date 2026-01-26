@@ -25,7 +25,7 @@ function initHeroVideo() {
     const videoElement = document.getElementById('heroVideo');
     if (!videoElement) return;
 
-    const fixedVideo = 'data/main (1).mp4';
+    const fixedVideo = 'images/main_video.mp4';
 
     // Find source element or create if not exists (though HTML has one)
     let sourceElement = videoElement.querySelector('source');
